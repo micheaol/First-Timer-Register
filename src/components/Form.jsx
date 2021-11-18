@@ -10,11 +10,11 @@ export const Form = () => {
             <div className="form-row">
                 <div className="form-group col-md-6">
                 <label for="text">Firstname</label>
-                <input type="email" className="form-control" id="inputFirstName" placeholder="Email"/>
+                <input type="email" className="form-control" id="inputFirstName" placeholder="Firstname"/>
                 </div>
                 <div className="form-group col-md-6">
                 <label for="text">Lastname</label>
-                <input type="text" className="form-control" id="inputLastname" placeholder="text"/>
+                <input type="text" className="form-control" id="inputLastname" placeholder="Lastname"/>
                 </div>
             </div>
             <div className="form-group">
