@@ -44,13 +44,9 @@ export const Form = () => {
                 </div>
                 <div className="form-group">
                     <div className="form-check">
-                    <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                    <label className="form-check-label" for="gridCheck">
-                        Check me out
-                    </label>
                     </div>
                 </div>
-            <button type="submit" className="btn btn-primary">Sign in</button>
+            <button type="submit" className="btn btn-primary">Submit</button>
         </form>
         </div>
     )
