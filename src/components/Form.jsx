@@ -4,16 +4,17 @@ import React from "react";
 
 
 export const Form = () => {
+    
     return (
         <div>
             <form className="form-class">
             <div className="form-row">
                 <div className="form-group col-md-6">
-                <label for="text">Firstname</label>
+                <label for="inputFirstname">Firstname</label>
                 <input type="email" className="form-control" id="inputFirstName" placeholder="Firstname"/>
                 </div>
                 <div className="form-group col-md-6">
-                <label for="text">Lastname</label>
+                <label for="inputLastname">Lastname</label>
                 <input type="text" className="form-control" id="inputLastname" placeholder="Lastname"/>
                 </div>
             </div>
@@ -27,7 +28,7 @@ export const Form = () => {
             </div>
             <div className="form-row">
                 <div className="form-group col-md-6">
-                <label for="inputCity">City</label>
+                <label for="inputPhone">Phone</label>
                 <input type="text" className="form-control" id="inputCity"/>
                 </div>
                 <div className="form-group col-md-4">

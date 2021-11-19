@@ -1,6 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 export class Nav extends React.Component {
+    constructor(props){
+        super(props);
+    }
     render(){
         return(
             <div>
@@ -11,7 +15,7 @@ export class Nav extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">Register New <span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="#">{this.props.register} <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
                     </li>
