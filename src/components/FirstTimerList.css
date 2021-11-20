@@ -5,3 +5,9 @@
     padding: 2%;
     margin-top: 3%;
 }
+
+.first-timer-table tr:hover {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px;
+}

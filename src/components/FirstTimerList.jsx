@@ -20,7 +20,6 @@ const FirstTimerList = ({contacts}) => {
                             <td>{contact.firstName}</td>
                             <td>{contact.lastName}</td>
                             <td>{contact.phone}</td>
-                            <button type="button" className="btn btn-dark">View</button>
                         </tr>
                         ))}
                 </tbody>
