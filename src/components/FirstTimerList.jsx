@@ -4,7 +4,7 @@ const FirstTimerList = ({contacts}) => {
 
     return ( 
         <div className="first-timer-table">
-            <table class="table table-dark">
+            <table className="table table-dark">
                 <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -15,12 +15,12 @@ const FirstTimerList = ({contacts}) => {
                 </thead>
                 <tbody>
                         {contacts.map((contact)=>(
-                            <tr>
+                            <tr key={contact.id}>
                             <th scope="row">{contact.id}</th>
                             <td>{contact.firstName}</td>
                             <td>{contact.lastName}</td>
                             <td>{contact.phone}</td>
-                            <button type="button" class="btn btn-dark">Dark</button>
+                            <button type="button" className="btn btn-dark">View</button>
                         </tr>
                         ))}
                 </tbody>
