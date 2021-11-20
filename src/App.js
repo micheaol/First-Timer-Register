@@ -7,19 +7,24 @@ import { Nav } from './components/Nav';
 
   const [contacts, setContacts] = useState(null);
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
 
 
   const fetchContacts = async()=>{
-    const data = await fetch('http://localhost:8000/contactss');
+    const data = await fetch('http://localhost:8000/contacts');
     try {
       if(!data.ok){
         throw Error('Opps! Something went wrong. Please try again later .....')
       }
       const contacts = await data.json()
       setContacts(contacts)
+      setIsLoading(false);
+      setError(null);
+
     } catch (err) {
       setError(err.message)
+      setIsLoading(false);
     }
     
   }
@@ -33,8 +38,10 @@ import { Nav } from './components/Nav';
     <div className="App">
       <header className="App-header">
         <Nav register="Register New"/>
-        {contacts && <FirstTimerList contacts={contacts}/>}
+        {isLoading && <div className="loading"></div>}
         {error && <div className="error-message">{error}</div>}
+        {contacts && <FirstTimerList contacts={contacts}/>}
+        
       </header>
     </div>
   );
