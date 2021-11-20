@@ -10,7 +10,7 @@ class Form extends React.Component {
                 <div className="form-row">
                     <div className="form-group col-md-6">
                     <label for="inputFirstname">{this.props.firstName}</label>
-                    <input type="email" className="form-control" id="inputFirstName" placeholder="Firstname"/>
+                    <input type="text" className="form-control" id="inputFirstName" placeholder="Firstname"/>
                     </div>
                     <div className="form-group col-md-6">
                     <label for="inputLastname">Lastname</label>
@@ -28,18 +28,14 @@ class Form extends React.Component {
                 <div className="form-row">
                     <div className="form-group col-md-6">
                     <label for="inputPhone">Phone</label>
-                    <input type="text" className="form-control" id="inputCity"/>
+                    <input placeholder="Phone number" type="text" className="form-control" id="inputCity"/>
                     </div>
-                    <div className="form-group col-md-4">
+                    <div className="form-group col-md-6">
                     <label for="inputState">State</label>
                     <select id="inputState" className="form-control">
-                        <option selected>Choose...</option>
+                        <option selected>State</option>
                         <option>...</option>
                     </select>
-                    </div>
-                    <div className="form-group col-md-2">
-                    <label for="inputZip">Zip</label>
-                    <input type="text" className="form-control" id="inputZip"/>
                     </div>
                     </div>
                     <div className="form-group">

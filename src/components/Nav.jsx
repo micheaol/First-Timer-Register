@@ -13,12 +13,12 @@ export class Nav extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">{this.props.register} <span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="/add-contact">{this.props.register} <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link disabled" href="#">Show Record</a>
+                        <a className="nav-link disabled" href="/">Show Record</a>
                     </li>
                     </ul>
                 </div>

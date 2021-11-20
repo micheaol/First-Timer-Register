@@ -1,23 +1,28 @@
 
 import './App.css';
-import FirstTimerList from './components/FirstTimerList';
 import { Nav } from './components/Nav';
-import useFetch from './useFetch';
+import Home from './Home';
+import Form from './components/Form'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
  const App = () => {
 
- const { data: contacts, isLoading, error} = useFetch('http://localhost:8000/contacts')
-
   return (
-    <div className="App">
-      <header className="App-header">
+    <Router>
+        <div className="App">
         <Nav register="Register New"/>
-        {isLoading && <div className="loading"></div>}
-        {error && <div className="error-message">{error}</div>}
-        {contacts && <FirstTimerList contacts={contacts}/>}
-        
-      </header>
+         <div className="content">
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route path="/add-contact">
+                    <Form />
+                </Route>
+            </Switch>
+         </div>
     </div>
+    </Router>
   );
   
 }
