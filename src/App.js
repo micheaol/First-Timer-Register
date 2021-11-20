@@ -1,8 +1,7 @@
 
 import './App.css';
 import Home from './Home';
-import Form from './components/Form'
-import ContactDetails from './components/ContactDetails'
+import Form from './components/Form';
 import { Nav } from './components/Nav';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -19,9 +18,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
                 </Route>
                 <Route path="/add-contact">
                     <Form />
-                </Route>
-                <Route path="/contacts/:id">
-                    <ContactDetails />
                 </Route>
             </Switch>
          </div>
