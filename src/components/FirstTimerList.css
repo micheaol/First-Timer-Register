@@ -1,0 +1,7 @@
+.first-timer-table {
+    border: 2px solid rgb(221, 216, 216);
+    display: inline-block;
+    min-width: 85vw;
+    padding: 2%;
+    margin-top: 3%;
+}
