@@ -1,55 +1,40 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import FirstTimerList from './components/FirstTimerList';
 import { Nav } from './components/Nav';
 
  const App = () => {
 
-  const [contacts, setContacts] = useState([
-    {
-      firstName: "Michael",
-      lastName: "Oladele",
-      phone: '012255421',
-      id: 1
-    },
-    {
-      firstName: "Rachel",
-      lastName: "Oladele",
-      phone: '012255421',
-      id: 2
-    },
-    {
-      firstName: "Matthew",
-      lastName: "Oladele",
-      phone: '012255421',
-      id: 3
-    },
-    {
-      firstName: "Light",
-      lastName: "Oladele",
-      phone: '012255421',
-      id: 4
-    },
-    {
-      firstName: "Joy",
-      lastName: "Emordi",
-      phone: '012255421',
-      id: 5
-    },
-    {
-      firstName: "Paul",
-      lastName: "Oladele",
-      phone: '012255421',
-      id: 6
-    },
-  ])
+  const [contacts, setContacts] = useState(null);
+  const [error, setError] = useState(null);
+
+
+
+  const fetchContacts = async()=>{
+    const data = await fetch('http://localhost:8000/contactss');
+    try {
+      if(!data.ok){
+        throw Error('Opps! Something went wrong. Please try again later .....')
+      }
+      const contacts = await data.json()
+      setContacts(contacts)
+    } catch (err) {
+      setError(err.message)
+    }
+    
+  }
+
+  useEffect(() => {
+   
+    fetchContacts()
+  }, [])
 
   return (
     <div className="App">
       <header className="App-header">
         <Nav register="Register New"/>
-        <FirstTimerList contacts={contacts}/>
-        {/* <Form firstName ="Your Name"/> */}
+        {contacts && <FirstTimerList contacts={contacts}/>}
+        {error && <div className="error-message">{error}</div>}
       </header>
     </div>
   );
