@@ -9,7 +9,7 @@ class Form extends React.Component {
                 <form className="form-class">
                 <div className="form-row">
                     <div className="form-group col-md-6">
-                    <label for="inputFirstname">{this.props.firstName}</label>
+                    <label for="inputFirstname">Firstname</label>
                     <input type="text" className="form-control" id="inputFirstName" placeholder="Firstname"/>
                     </div>
                     <div className="form-group col-md-6">
