@@ -1,38 +1,12 @@
-import { useState, useEffect } from 'react';
+
 import './App.css';
 import FirstTimerList from './components/FirstTimerList';
 import { Nav } from './components/Nav';
+import useFetch from './useFetch';
 
  const App = () => {
 
-  const [contacts, setContacts] = useState(null);
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-
-
-  const fetchContacts = async()=>{
-    const data = await fetch('http://localhost:8000/contacts');
-    try {
-      if(!data.ok){
-        throw Error('Opps! Something went wrong. Please try again later .....')
-      }
-      const contacts = await data.json()
-      setContacts(contacts)
-      setIsLoading(false);
-      setError(null);
-
-    } catch (err) {
-      setError(err.message)
-      setIsLoading(false);
-    }
-    
-  }
-
-  useEffect(() => {
-   
-    fetchContacts()
-  }, [])
+ const { data: contacts, isLoading, error} = useFetch('http://localhost:8000/contacts')
 
   return (
     <div className="App">
