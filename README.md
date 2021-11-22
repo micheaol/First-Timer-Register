@@ -1,7 +1,7 @@
 ### First Timer Tracker
 
 First timer track is an application built to track the number of people that attend a particular church service at a particular time.
-The tracker will fetch data and send data back to a dedicated API built specifically for the project with Node.js
+The tracker will fetch data and send data back to a dedicated API built specifically for the project.
 
 
 ![tracker](https://user-images.githubusercontent.com/10332499/142789919-7beb7945-26e6-43c2-ab29-ef17fb82fc01.PNG)
