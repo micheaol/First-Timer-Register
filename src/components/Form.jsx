@@ -53,7 +53,7 @@ const Form = () => {
             </div>
         </div>
         <div className="form-group">
-            <label htmlFor="inputAddress">Address</label>
+            <label htmlFor="inputAddress">Contact Address</label>
             <input type="text" required className="form-control" id="inputAddress" placeholder="1234 Main St"
                 value={address}
                 onChange={(e)=> setAddress(e.target.value)}
