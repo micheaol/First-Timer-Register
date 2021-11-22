@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import './Nav.css';
 import { Link } from 'react-router-dom';
 
 export class Nav extends React.Component {
@@ -13,7 +14,7 @@ export class Nav extends React.Component {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li className="nav-item active">
+                    <li className="nav-item">
                         <Link className="nav-link" to="/add-contact">{this.props.register} <span className="sr-only">(current)</span></Link>
                     </li>
                     <li className="nav-item">

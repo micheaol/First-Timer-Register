@@ -1,5 +1,5 @@
 import './FirstTimerList.css';
-import { Link } from 'react-router-dom';
+
 
 const FirstTimerList = ({contacts}) => {
 

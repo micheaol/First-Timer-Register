@@ -20,7 +20,7 @@ const Form = () => {
 
         setIsPending(true)
 
-        fetch('http://localhost:8000/contacts', {
+        fetch('https://first-timer-tracker.herokuapp.com/api/contacts', {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(contacts)
@@ -37,7 +37,6 @@ const Form = () => {
         <div>
 
         <form className="form-class" onSubmit={handleSubmit}>
-        <h1></h1>
         <div className="form-row">
             <div className="form-group col-md-6">
             <label htmlFor="inputFirstname">Firstname</label>

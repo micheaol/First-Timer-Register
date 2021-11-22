@@ -3,7 +3,9 @@ import useFetch from './useFetch';
 
 const Home = () => {
 
-    const { data: contacts, isLoading, error} = useFetch('http://localhost:8000/contacts')
+    const { data: contacts, isLoading, error} = useFetch('https://first-timer-tracker.herokuapp.com/api/contacts');
+
+    console.log(contacts)
 
     return ( 
        <div className="home">
