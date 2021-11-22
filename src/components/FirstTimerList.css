@@ -1,0 +1,13 @@
+.first-timer-table {
+    border: 2px solid rgb(221, 216, 216);
+    display: inline-block;
+    min-width: 85vw;
+    padding: 2%;
+    margin-top: 3%;
+}
+
+.first-timer-table tr:hover {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 5px;
+}

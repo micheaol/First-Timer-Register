@@ -1,0 +1,7 @@
+
+ul li:hover {
+    border: 1px solid;
+    padding: 5px;
+    box-shadow: 5px 5px;
+    
+}
